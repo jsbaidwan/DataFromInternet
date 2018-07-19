@@ -1,5 +1,7 @@
 package com.example.android.datafrominternet.utilities;
 
+import java.net.URL;
+
 /**
  * These utilities will be used to communicate with the network.
  */
@@ -17,4 +19,13 @@ public class NetworkUtils {
     final static String PARAM_SORT = "sort";
     final static String sortBy = "stars";
 
+    /**
+     * Builds the URL used to query Github.
+     *
+     * @param githubSearchQuery The keyword that will be queried for.
+     * @return The URL to use to query the weather server.
+     */
+    public static URL buildUrl(String githubSearchQuery) {
+        return null;
+    }
 }
