@@ -10,4 +10,11 @@ public class NetworkUtils {
 
     final static String PARAM_QUERY = "q";
 
+    /*
+     * The sort field. One of stars, forks, or updated.
+     * Default: results are sorted by best match if no field is specified.
+     */
+    final static String PARAM_SORT = "sort";
+    final static String sortBy = "stars";
+
 }
