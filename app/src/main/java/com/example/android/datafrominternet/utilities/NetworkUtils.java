@@ -1,5 +1,6 @@
 package com.example.android.datafrominternet.utilities;
 
+import java.io.IOException;
 import java.net.URL;
 
 /**
@@ -26,6 +27,17 @@ public class NetworkUtils {
      * @return The URL to use to query the weather server.
      */
     public static URL buildUrl(String githubSearchQuery) {
+        return null;
+    }
+
+    /**
+     * This method returns the entire result from the HTTP response.
+     *
+     * @param url The URL to fetch the HTTP response from.
+     * @return The contents of the HTTP response.
+     * @throws IOException Related to network and stream reading
+     */
+    public static String getResponseFromHttpUrl (URL url) throws IOException {
         return null;
     }
 }
