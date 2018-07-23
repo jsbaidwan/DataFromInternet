@@ -1,6 +1,7 @@
 package com.example.android.datafrominternet.utilities;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.net.HttpURLConnection;
 
@@ -41,6 +42,9 @@ public class NetworkUtils {
      */
     public static String getResponseFromHttpUrl (URL url) throws IOException {
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+        try {
+            InputStream in = urlConnection.getInputStream();
+        }
         return null;
     }
 }
