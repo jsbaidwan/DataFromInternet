@@ -44,6 +44,8 @@ public class NetworkUtils {
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         try {
             InputStream in = urlConnection.getInputStream();
+        } finally {
+            urlConnection.disconnect();
         }
         return null;
     }
