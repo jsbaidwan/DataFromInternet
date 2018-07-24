@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.HttpURLConnection;
+import java.util.Scanner;
 
 
 /**
@@ -44,6 +45,15 @@ public class NetworkUtils {
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         try {
             InputStream in = urlConnection.getInputStream();
+
+            /**
+             * Convert Input stream to a String.
+             */
+            // separate tokens using "beginning of the input boundary"
+            // (\A) thus giving us only one token for the entire contents of the stream
+            Scanner scanner = new Scanner(in);
+            scanner.useDelimiter("\\A");
+
         } finally {
             urlConnection.disconnect();
         }
