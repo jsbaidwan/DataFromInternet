@@ -1,5 +1,7 @@
 package com.example.android.datafrominternet.utilities;
 
+import android.net.Uri;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -31,6 +33,13 @@ public class NetworkUtils {
      * @return The URL to use to query the weather server.
      */
     public static URL buildUrl(String githubSearchQuery) {
+        // Android Uri.Builder framework class allows to create well-formed URI
+        // without having to worry about URI components.
+        Uri buildUri = Uri.parse(GITHUB_BASE_URL).buildUpon()
+                          .appendQueryParameter(PARAM_QUERY, githubSearchQuery)
+                          .appendQueryParameter(PARAM_SORT, sortBy)
+                          .build();
+
         return null;
     }
 
