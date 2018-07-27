@@ -4,6 +4,7 @@ import android.net.Uri;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.HttpURLConnection;
 import java.util.Scanner;
@@ -40,7 +41,16 @@ public class NetworkUtils {
                           .appendQueryParameter(PARAM_SORT, sortBy)
                           .build();
 
-        return null;
+        // Convert the Android new built Uri to Java URL
+        // by passing it as String parameter to the Java URL constructor
+        URL url = null;
+        try {
+            url = new URL(buildUri.toString());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+        return url;
     }
 
     /**
