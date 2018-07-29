@@ -15,6 +15,7 @@ import java.util.Scanner;
  */
 public class NetworkUtils {
 
+    // TODO(1): Created a constants for base URl
     final static String GITHUB_BASE_URL =
             "https://api.github.com/search/repositories";
 
@@ -27,6 +28,7 @@ public class NetworkUtils {
     final static String PARAM_SORT = "sort";
     final static String sortBy = "stars";
 
+    // TODO(3): Build the URL and pass the parameter
     /**
      * Builds the URL used to query Github.
      *
@@ -53,6 +55,7 @@ public class NetworkUtils {
         return url;
     }
 
+    // TODO(2): Receive HTTP response form the Url
     /**
      * This method returns the entire result from the HTTP response.
      *
