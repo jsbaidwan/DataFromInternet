@@ -71,9 +71,12 @@ public class NetworkUtils {
             /**
              * Convert Input stream to a String.
              */
+            // Scanner used to tokenize Streams
             // separate tokens using "beginning of the input boundary"
             // (\A) thus giving us only one token for the entire contents of the stream
             Scanner scanner = new Scanner(in);
+            // Setting the delimiter to \A beginning of the stream,
+            // we force the scanner to read the entire contents of stream into the next token stream
             scanner.useDelimiter("\\A");
 
             boolean hasInput = scanner.hasNext();
