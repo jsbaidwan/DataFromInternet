@@ -67,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemThatWasClicked = item.getItemId();
         if(itemThatWasClicked == R.id.action_search) {
-            Toast.makeText(this, "Search Clicked", Toast.LENGTH_SHORT).show();
+            makeGithubSearchQuery();
+            //Toast.makeText(this, "Search Clicked", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }
