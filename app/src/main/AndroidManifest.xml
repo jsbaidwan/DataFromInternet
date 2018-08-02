@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.android.datafrominternet">
 
+    <!--TODO(4): Give permission to access Internet-->
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application

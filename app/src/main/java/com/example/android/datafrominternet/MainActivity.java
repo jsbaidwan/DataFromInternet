@@ -15,6 +15,7 @@
  */
 package com.example.android.datafrominternet;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -65,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+    public class GithubQueryTask extends AsyncTask <URL, Void, String> {
 
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
