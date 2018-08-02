@@ -57,17 +57,22 @@ public class MainActivity extends AppCompatActivity {
         URL githubSearchUrl = NetworkUtils.buildUrl(githubQuery);
         mUrlDisplayTextView.setText(githubSearchUrl.toString());
 
-        String githubSearchResult = null;
-        try {
-            githubSearchResult = NetworkUtils.getResponseFromHttpUrl(githubSearchUrl);
-            mSearchResultsTextView.setText(githubSearchResult);
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
     public class GithubQueryTask extends AsyncTask <URL, Void, String> {
-
+        @Override
+        protected String doInBackground (URL... urls) {
+            URL searchUrl = urls[0];
+            String githubSearchResult = null;
+            try {
+                githubSearchResult = NetworkUtils.getResponseFromHttpUrl(searchUrl);
+                mSearchResultsTextView.setText(githubSearchResult);
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+            return githubSearchResult;
+        }
     }
 
     @Override
