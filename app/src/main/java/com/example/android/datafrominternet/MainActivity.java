@@ -73,6 +73,13 @@ public class MainActivity extends AppCompatActivity {
             }
             return githubSearchResult;
         }
+
+        @Override
+        protected void onPostExecute(String searchResults) {
+            if(searchResults != null && searchResults.equals("")) {
+                mSearchResultsTextView.setText(searchResults);
+            }
+        }
     }
 
     @Override
