@@ -39,16 +39,20 @@
         android:text="Click search and your URL will show up here!"
         android:textSize="22sp" />
 
-    <ScrollView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
-
-        <TextView
-            android:id="@+id/tv_github_search_results_json"
-            android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Make a search!"
-            android:textSize="18sp" />
-    </ScrollView>
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/tv_github_search_results_json"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Make a search!"
+                android:textSize="18sp" />
+        </ScrollView>
+    </FrameLayout>
 </LinearLayout>
