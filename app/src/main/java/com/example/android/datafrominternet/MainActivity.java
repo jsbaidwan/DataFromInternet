@@ -77,6 +77,20 @@ public class MainActivity extends AppCompatActivity {
         mSearchResultsTextView.setVisibility(View.VISIBLE);
     }
 
+    /**
+     * This method will make the error message visible and hide the JSON
+     * View.
+     * <p>
+     * Since it is okay to redundantly set the visibility of a View, we don't
+     * need to check whether each view is currently visible or invisible.
+     */
+    private void showErrorMessage() {
+        // First, hide the currently visible data
+        mSearchResultsTextView.setVisibility(View.INVISIBLE);
+        // Then, show the error
+        mErrorMessageDisplay.setVisibility(View.VISIBLE);
+    }
+
     public class GithubQueryTask extends AsyncTask <URL, Void, String> {
         @Override
         protected String doInBackground (URL... urls) {
