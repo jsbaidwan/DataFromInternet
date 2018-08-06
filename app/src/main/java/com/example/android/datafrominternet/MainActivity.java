@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mSearchResultsTextView;
 
+    private TextView mErrorMessageDisplay;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
