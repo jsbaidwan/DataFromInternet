@@ -109,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String searchResults) {
             if(searchResults != null && searchResults.equals("")) {
+                showJsonDataView();
                 mSearchResultsTextView.setText(searchResults);
             }
             else {
