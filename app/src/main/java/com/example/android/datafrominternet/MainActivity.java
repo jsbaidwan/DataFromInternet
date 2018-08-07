@@ -111,6 +111,9 @@ public class MainActivity extends AppCompatActivity {
             if(searchResults != null && searchResults.equals("")) {
                 mSearchResultsTextView.setText(searchResults);
             }
+            else {
+                showErrorMessage();
+            }
         }
     }
 
