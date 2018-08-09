@@ -95,6 +95,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public class GithubQueryTask extends AsyncTask <URL, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            mLoadingIndicator.setVisibility(View.VISIBLE);
+        }
+
         @Override
         protected String doInBackground (URL... urls) {
             URL searchUrl = urls[0];
