@@ -118,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String searchResults) {
+            mLoadingIndicator.setVisibility(View.INVISIBLE);
             if(searchResults != null && searchResults.equals("")) {
                 showJsonDataView();
                 mSearchResultsTextView.setText(searchResults);
