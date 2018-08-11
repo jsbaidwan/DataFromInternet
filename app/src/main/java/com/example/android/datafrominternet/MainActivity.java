@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+            // show loading indicator till we did not get the results
             mLoadingIndicator.setVisibility(View.VISIBLE);
         }
 
@@ -118,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String searchResults) {
+            // Hide indicator after we get the results
             mLoadingIndicator.setVisibility(View.INVISIBLE);
             if(searchResults != null && searchResults.equals("")) {
                 showJsonDataView();
