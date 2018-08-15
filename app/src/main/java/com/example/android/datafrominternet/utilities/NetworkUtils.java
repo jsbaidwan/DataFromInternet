@@ -17,7 +17,8 @@ public class NetworkUtils {
 
     // TODO(1): Created a constants for base URl
     final static String GITHUB_BASE_URL =
-            "https://api.github.com/search/repositories";
+            //"https://api.github.com/search/repositories";
+    "";
 
     final static String PARAM_QUERY = "q";
 
