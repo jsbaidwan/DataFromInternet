@@ -17,8 +17,7 @@ public class NetworkUtils {
 
     // TODO(1): Created a constants for base URl
     final static String GITHUB_BASE_URL =
-            //"https://api.github.com/search/repositories";
-    "";
+            "https://api.github.com/search/repositories";
 
     final static String PARAM_QUERY = "q";
 
@@ -90,5 +89,9 @@ public class NetworkUtils {
         } finally {
             urlConnection.disconnect();
         }
+    }
+
+    public static String ReadStream (InputStream inputStream) throws IOException {
+        return
     }
 }
